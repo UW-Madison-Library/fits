@@ -1,6 +1,8 @@
 /build_local
 *.class
 /fitsBasicTestOutput.xml
+.idea/
+fits.iml
 
 # Directory created by fits-blackbox-tester
 .bb-testing/
