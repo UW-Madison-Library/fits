@@ -30,7 +30,6 @@
     <well-formed toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">true</well-formed>
     <valid toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">true</valid>
     <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">Unknown TIFF IFD tag: 50341 severity=info offset=278</message>
-    <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">TIFF compression scheme 6 is deprecated severity=info</message>
   </filestatus>
   <metadata>
     <image>
@@ -55,7 +54,8 @@
       <exposureTime toolname="Exiftool" toolversion="11.01" status="CONFLICT">0.0083</exposureTime>
       <exposureTime toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="CONFLICT">0.008333333333333333</exposureTime>
       <isoSpeedRating toolname="Jhove" toolversion="1.20">400</isoSpeedRating>
-      <brightnessValue toolname="Jhove" toolversion="1.20">3.02</brightnessValue>
+      <brightnessValue toolname="Jhove" toolversion="1.20" status="CONFLICT">302100</brightnessValue>
+      <brightnessValue toolname="Exiftool" toolversion="11.54" status="CONFLICT">3.02</brightnessValue>
       <exposureBiasValue toolname="Jhove" toolversion="1.20">0</exposureBiasValue>
       <lightSource toolname="Jhove" toolversion="1.20">unknown</lightSource>
       <meteringMode toolname="Jhove" toolversion="1.20">Pattern</meteringMode>
@@ -136,8 +136,8 @@
                     <mix:denominator>100</mix:denominator>
                   </mix:apertureValue>
                   <mix:brightnessValue>
-                    <mix:numerator>302</mix:numerator>
-                    <mix:denominator>100</mix:denominator>
+                    <mix:numerator>302100</mix:numerator>
+                    <mix:denominator>1</mix:denominator>
                   </mix:brightnessValue>
                   <mix:exposureBiasValue>
                     <mix:numerator>0</mix:numerator>

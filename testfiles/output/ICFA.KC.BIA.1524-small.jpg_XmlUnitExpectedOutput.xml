@@ -33,7 +33,6 @@
     <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">Value offset not word-aligned: 247 severity=info offset=138</message>
     <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">Value offset not word-aligned: 255 severity=info offset=174</message>
     <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">Value offset not word-aligned: 285 severity=info offset=186</message>
-    <message toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">TIFF compression scheme 6 is deprecated severity=info</message>
   </filestatus>
   <metadata>
     <image>
@@ -41,7 +40,8 @@
       <compressionScheme toolname="Jhove" toolversion="1.20">JPEG</compressionScheme>
       <imageWidth toolname="Jhove" toolversion="1.20">109</imageWidth>
       <imageHeight toolname="Jhove" toolversion="1.20">150</imageHeight>
-      <colorSpace toolname="Exiftool" toolversion="11.01" status="SINGLE_RESULT">RGB</colorSpace>
+      <colorSpace toolname="Jhove" toolversion="1.20" status="CONFLICT">YCbCr</colorSpace>
+      <colorSpace toolname="Exiftool" toolversion="11.54" status="CONFLICT">RGB</colorSpace>
       <iccProfileName toolname="Jhove" toolversion="1.20">Adobe RGB (1998)</iccProfileName>
       <YCbCrSubSampling toolname="Exiftool" toolversion="11.01" status="SINGLE_RESULT">1 1</YCbCrSubSampling>
       <orientation toolname="Exiftool" toolversion="11.01">normal*</orientation>
@@ -81,7 +81,7 @@
               <mix:imageWidth>109</mix:imageWidth>
               <mix:imageHeight>150</mix:imageHeight>
               <mix:PhotometricInterpretation>
-                <mix:colorSpace>RGB</mix:colorSpace>
+                <mix:colorSpace>YCbCr</mix:colorSpace>
                 <mix:ColorProfile>
                   <mix:IccProfile>
                     <mix:iccProfileName>Adobe RGB (1998)</mix:iccProfileName>
