@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>edu.harvard.huit.lts</groupId>
 	<artifactId>fits</artifactId>
-	<version>1.6.2-wisc-SNAPSHOT</version>
+	<version>1.6.2-wisc</version>
 	<packaging>jar</packaging>
 
 	<name>FITS</name>
