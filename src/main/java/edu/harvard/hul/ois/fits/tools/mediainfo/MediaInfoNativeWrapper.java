@@ -56,37 +56,8 @@ class MediaInfoNativeWrapper
            String os=System.getProperty("os.name");
            if (os!=null && !os.toLowerCase().startsWith("windows") && !os.toLowerCase().startsWith("mac"))
            {
-               final ClassLoader loader=MediaInfoNativeWrapper.class.getClassLoader();
-               final String LocalPath;
-               if (loader!=null)
-               {
-                   LocalPath=loader.getResource(MediaInfoNativeWrapper.class.getName().replace('.', '/')+ ".class").getPath().replace("MediaInfoNativeWrapper.class", "");
-                   try
-                   {
-                       NativeLibrary.getInstance(LocalPath+"libzen.so.0"); // Local path
-                   }
-                   catch (LinkageError e)
-                   {
-                       NativeLibrary.getInstance("zen"); // Default path
-                   }
-               }
-               else
-               {
-                   LocalPath="";
-                   NativeLibrary.getInstance("zen"); // Default path
-               }
-               if (LocalPath.length()>0)
-               {
-                   try
-                   {
-                       NativeLibrary.getInstance(LocalPath+"libmediainfo.so.0"); // Local path
-                       LibraryPath=LocalPath+"libmediainfo.so.0";
-                   }
-                   catch (LinkageError e)
-                   {
-                       NativeLibrary.getInstance("mediainfo");
-                   }
-               }
+               NativeLibrary.getInstance("zen");
+               NativeLibrary.getInstance("mediainfo");
            }
        }
        catch (LinkageError  e)
