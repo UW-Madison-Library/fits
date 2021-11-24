@@ -46,3 +46,4 @@ Microsoft Powerpoint for Windows=Office Open XML Presentation
 Comma Separated Values=Comma-Separated Values (CSV)
 MPEG-4 Media File=MPEG-4
 Keyhole Markup Language (XML)=Keyhole Markup Language
+Web Video Text Tracks (WebVTT) Format=WebVTT
