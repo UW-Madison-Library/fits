@@ -36,7 +36,8 @@
       <author toolname="Exiftool" toolversion="11.14">Neiman David</author>
       <lineCount toolname="Exiftool" toolversion="11.14" status="SINGLE_RESULT">27</lineCount>
       <paragraphCount toolname="Exiftool" toolversion="11.14" status="SINGLE_RESULT">21</paragraphCount>
-      <subject toolname="Exiftool" toolversion="11.14">This is the Subject</subject>
+      <subject toolname="Exiftool" toolversion="11.14" status="CONFLICT">This is the Subject</subject>
+      <subject toolname="Tika" toolversion="2.2.1" status="CONFLICT">Outline, Table</subject>
       <category toolname="Exiftool" toolversion="11.14">This is a Category</category>
       <language toolname="Exiftool" toolversion="11.14">U.S. English</language>
       <standard>

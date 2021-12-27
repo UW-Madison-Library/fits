@@ -20,8 +20,9 @@ import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.apache.tika.Tika;
 import org.apache.tika.config.TikaConfig;
+import org.apache.tika.exception.EncryptedDocumentException;
+import org.apache.tika.exception.TikaException;
 import org.apache.tika.io.TikaInputStream;
 import org.apache.tika.metadata.HttpHeaders;
 import org.apache.tika.metadata.Metadata;
@@ -34,6 +35,9 @@ import org.apache.tika.metadata.XMP;
 import org.apache.tika.mime.MimeType;
 import org.apache.tika.mime.MimeTypeException;
 import org.apache.tika.mime.MimeTypes;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
 import org.jdom.Attribute;
 import org.jdom.Document;
 import org.jdom.Element;
@@ -47,6 +51,7 @@ import edu.harvard.hul.ois.fits.tools.ToolBase;
 import edu.harvard.hul.ois.fits.tools.ToolInfo;
 import edu.harvard.hul.ois.fits.tools.ToolOutput;
 import edu.harvard.hul.ois.fits.tools.utils.XmlUtils;
+import org.xml.sax.helpers.DefaultHandler;
 
 public class TikaTool extends ToolBase {
 
@@ -193,10 +198,10 @@ public class TikaTool extends ToolBase {
 
     private final static Namespace fitsNS = Namespace.getNamespace (Fits.XML_NAMESPACE);
     private final static String TOOL_NAME = "Tika";
-    private final static String TOOL_VERSION = "2.0.0";  // Hard-coded version till we can do better
+    private final static String TOOL_VERSION = "2.2.1";  // Hard-coded version till we can do better
 
     private final static MimeTypes mimeTypes = MimeTypes.getDefaultMimeTypes();
-    private Tika tika;
+    private final Parser tikaParser;
 
     private static final Logger logger = Logger.getLogger(TikaTool.class);
     private boolean enabled = true;
@@ -206,7 +211,7 @@ public class TikaTool extends ToolBase {
 		super();
 		try {
 			TikaConfig config = new TikaConfig(Fits.FITS_XML_DIR + "tika" + File.separator + "tika-config.xml");
-			tika = new Tika (config);
+			tikaParser = new AutoDetectParser(config);
 		} catch (Exception e) {
 			throw new FitsToolException("Problem loading tika-config.xml", e);
 		}
@@ -232,10 +237,16 @@ public class TikaTool extends ToolBase {
         }
 
         try {
-            tika.parse(instrm, metadata);
-        } catch (IOException e) {
-            logger.debug (e.getClass().getName() + " in Tika: " + e.getMessage());
-            throw new FitsToolException ("IOException in Tika", e);
+            ParseContext context = new ParseContext();
+            context.set(Parser.class, tikaParser);
+            tikaParser.parse(instrm, new DefaultHandler(), metadata, context);
+        } catch (EncryptedDocumentException e) {
+            logger.debug("Tika cannot parse file " + file.getAbsolutePath() + " because it is encrypted");
+        } catch (TikaException e) {
+            logger.debug("Tika encountered an issue parsing file", e);
+        } catch (Exception e) {
+            logger.debug(e.getClass().getName() + " in Tika: " + e.getMessage(), e);
+            throw new FitsToolException("Tika failed", e);
         } finally {
             try {
                 instrm.close();

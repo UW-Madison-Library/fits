@@ -9,6 +9,7 @@
     </identity>
   </identification>
   <fileinfo>
+    <created toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">1865-07-04</created>
     <filepath toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">/Users/dan179/git/fits-daveneiman/fits/testfiles/aliceDynamic_images_metadata_tableOfContents.epub</filepath>
     <filename toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">aliceDynamic_images_metadata_tableOfContents.epub</filename>
     <size toolname="OIS File Information" toolversion="0.2">1135531</size>
