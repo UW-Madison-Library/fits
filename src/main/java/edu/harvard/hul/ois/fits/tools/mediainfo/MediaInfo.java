@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.StringReader;
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.jdom.Document;
 
@@ -34,9 +33,6 @@ public class MediaInfo extends ToolBase {
 
     private final static String mediaInfoFitsConfig = Fits.FITS_XML_DIR+"mediainfo"+File.separator;
     private final static String xsltTransform = "mediainfo_video_to_fits.xslt";
-    private final static String WINDOWS_NATIVE_LIB_PATH = "tools" + File.separator + "mediainfo" + File.separator + "windows" + File.separator + "64";
-    private final static String OSX_NATIVE_LIB_PATH = "tools" + File.separator + "mediainfo" + File.separator + "mac";
-    private final static String LINUX_NATIVE_LIB_PATH = "tools" + File.separator + "mediainfo" + File.separator + "linux";
 
     private static final Logger logger = Logger.getLogger(MediaInfo.class);
     private static MediaInfoNativeWrapper mi = null;
@@ -55,34 +51,7 @@ public class MediaInfo extends ToolBase {
 		info = new ToolInfo();
 		info.setName(TOOL_NAME);
 
-		String fitsHome = Fits.FITS_HOME; // this will always have a trailing slash if not empty
-		String nativeLibPath = "";
-
-		// Set the JNA library path based upon the OS
-		OsCheck.OSType ostype=OsCheck.getOperatingSystemType();
-		switch (ostype) {
-		    case Windows:
-		    	// default setting
-		    	if(fitsHome.equals(".")) {
-		    		fitsHome = System.getProperty("user.dir");
-		    	}
-		    	// Assume both a 64-bit operating system AND Java version, so default to 64-bit DLL location.
-		    	// 32 bit is not supported so pointing to 64-bit DLL will likely result in an error.
-		    	nativeLibPath = fitsHome + WINDOWS_NATIVE_LIB_PATH;
-		    	break;
-		    case MacOS:
-	    		nativeLibPath = fitsHome + OSX_NATIVE_LIB_PATH;
-	    		break;
-		    case Linux:
-		    	nativeLibPath = fitsHome + LINUX_NATIVE_LIB_PATH;
-		    	break;
-		    case Other:
-		    	logger.warn("Unsupported native support in MediaInfo for this OS");
-		    	break;
-		}
-
 		try {
-			System.setProperty("jna.library.path", nativeLibPath);
 		    String versionOutput = MediaInfoNativeWrapper.Option_Static("Info_Version");
 		    // Strip "MediaInfoLib - v" from the version
 		    info.setVersion(versionOutput.replace("MediaInfoLib - v",""));
@@ -90,12 +59,10 @@ public class MediaInfo extends ToolBase {
 		    // Initialize the native library 
 		    mi = new MediaInfoNativeWrapper();
 
-		} catch (Throwable e){
-			String jvmModel =  System.getProperty("sun.arch.data.model");
-			logger.error("Error loading native library for this operating system for tool: " + TOOL_NAME +
-					". ostype=[" + ostype + "] -- jvmModel=[" + jvmModel + "] -- nativeLibPath=[" + nativeLibPath + "]" +
-					(nativeLibPath.length() == 0 ? "" : " -- No native MediaInfo library for this OS"), e);
-			throw new FitsToolException();
+		} catch (Throwable e) {
+			String message = "Error loading native library for this operating system for tool: " + TOOL_NAME;
+			logger.error(message, e);
+			throw new FitsToolException(message, e);
 		}
 
 	}
