@@ -1,16 +1,20 @@
-# This file creates an image that can be used to execute the unit tests.
+# This file creates a FITS image.
 #
 # Usage:
 #   # Build the image
-#   podman build -f docker/Dockerfile-test -t fits-test
+#   mvn -DskipTests clean package
+#   podman build -f docker/Dockerfile -t fits .
 #
-#   # Run the tests
-#   podman run -v `pwd`:/fits:z -v ~/.m2:/root/.m2:z fits-test mvn clean test
+#   # Run FITS on a file
+#   podman run -v `pwd`:/work:z fits -i file.txt
 #
-#   # Interactive container access
-#   podman run -it -v `pwd`:/fits:z -v ~/.m2:/root/.m2:z fits-test
+#   # Run FITS on a directory
+#   podman run -v `pwd`:/work:z fits -r -i in-dir -o out-dir
+#
+#   # Run FITS with alternate configuration
+#   podman run -v `pwd`:/work:z fits -f fits-custom.xml -i file.txt
 
-FROM docker.io/maven:3-eclipse-temurin-17
+FROM docker.io/eclipse-temurin:17-jre-focal
 
 ARG FILE_VERSION=5.41
 
@@ -47,9 +51,17 @@ RUN cd /var/tmp && \
     cd .. && \
     rm -rf file-${FILE_VERSION}*
 
+# Install FITS
+RUN apt-get install -yqq unzip
+COPY target/fits-*.zip /opt/fits.zip
+RUN unzip -q /opt/fits.zip -d /opt/fits && \
+    rm /opt/fits.zip && \
+    mkdir -p /var/log/fits
+
 # Cleanup package list
 RUN  rm -rf /var/lib/apt/lists/*
 
-WORKDIR /fits
+# Bind the current working directory here so that FITS can access files on the host
+WORKDIR /work
 
-CMD ["bash"]
+ENTRYPOINT ["/opt/fits/fits.sh"]
