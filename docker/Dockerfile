@@ -16,11 +16,13 @@
 
 FROM docker.io/eclipse-temurin:17-jre-focal
 
+ARG EXIFTOOL_VERSION=12.38
 ARG FILE_VERSION=5.41
 
-RUN apt-get update
+RUN apt-get update && \
+    apt-get install -yqq make
 
-# Install exiftool dependencies https://github.com/exiftool/exiftool
+# Install exiftool https://github.com/exiftool/exiftool
 RUN apt-get install -yqq \
     libarchive-zip-perl \
     libio-compress-perl \
@@ -33,13 +35,17 @@ RUN apt-get install -yqq \
     libdigest-sha-perl \
     libposix-strptime-perl \
     libunicode-linebreak-perl
-
-# Install file dependencies
-RUN apt-get install -yqq \
-    make \
-    gcc
+RUN cd /var/tmp && \
+    curl -so exiftool.tgz https://exiftool.org/Image-ExifTool-${EXIFTOOL_VERSION}.tar.gz && \
+    tar xzf exiftool.tgz && \
+    cd Image-ExifTool-${EXIFTOOL_VERSION} && \
+    perl Makefile.PL && \
+    make install && \
+    cd .. && \
+    rm -r exiftool.tgz Image-ExifTool-${EXIFTOOL_VERSION}
 
 # Install file https://github.com/file/file
+RUN apt-get install -yqq gcc
 RUN cd /var/tmp && \
     curl -so file-${FILE_VERSION}.tar.gz https://astron.com/pub/file/file-${FILE_VERSION}.tar.gz && \
     tar xzf file-${FILE_VERSION}.tar.gz && \

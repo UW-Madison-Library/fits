@@ -32,14 +32,10 @@ import edu.harvard.hul.ois.fits.tools.utils.CommandLine;
 
 public class FileUtility extends ToolBase {
 
-	private boolean osIsWindows = false;
-	private boolean osHasTool = false;
-	private List<String> WIN_COMMAND = new ArrayList<String>(Arrays.asList(Fits.FITS_TOOLS_DIR+"file_utility_windows/bin/file.exe"));
-	private List<String> UNIX_COMMAND = new ArrayList<String>(Arrays.asList("file"));
-	private List<String> FILE_TEST_COMMAND = new ArrayList<String>(Arrays.asList("which", "file"));
-	private final static String WIN_FILE_DATE = "6/7/2008";
+	private final List<String> UNIX_COMMAND = new ArrayList<String>(Arrays.asList("file"));
+	private final List<String> FILE_TEST_COMMAND = new ArrayList<String>(Arrays.asList("which", "file"));
 	private boolean enabled = true;
-    private Fits fits;
+    private final Fits fits;
 
     private static final Logger logger = Logger.getLogger(FileUtility.class);
 
@@ -52,20 +48,11 @@ public class FileUtility extends ToolBase {
 		String osName = System.getProperty("os.name");
 		info = new ToolInfo();
 		String versionOutput = null;
-		List<String> infoCommand = new ArrayList<String>();
+		List<String> infoCommand;
 		info.setName("file utility");
-		if (osName.startsWith("Windows")) {
-			//use provided Windows File Utility
-			osIsWindows = true;
-			info.setDate(WIN_FILE_DATE);
-			infoCommand.addAll(WIN_COMMAND);
-	        logger.debug("FileUtility will use Windows environment");
-
-		}
-		else if (testOSForCommand()){
-			osHasTool = true;
+		if (testOSForCommand()){
 			//use file command in operating system
-			infoCommand.addAll(UNIX_COMMAND);
+			infoCommand = new ArrayList<>(UNIX_COMMAND);
             logger.debug("FileUtility will use system command");
 		}
 
@@ -88,14 +75,7 @@ public class FileUtility extends ToolBase {
 	    logger.debug("FileUtility.extractInfo starting");
 		long startTime = System.currentTimeMillis();
 
-		List<String> execCommand = new ArrayList<String>();
-		if (osIsWindows) {
-			//use provided Windows File Utility
-			execCommand.addAll(WIN_COMMAND);
-		} else {
-			//use file command in operating system
-			execCommand.addAll(UNIX_COMMAND);
-		}
+		List<String> execCommand = new ArrayList<>(UNIX_COMMAND);
 		execCommand.add("-b"); // omit file name in output
 		if(info.getVersion().startsWith("5")) {
 			execCommand.add("-e"); // exclude specified test

@@ -38,14 +38,11 @@ import edu.harvard.hul.ois.fits.tools.utils.XsltTransformMap;
  */
 public class Exiftool extends ToolBase {
 
-	private boolean osIsWindows = false;
-	private boolean osHasPerl = false;
-	private List<String> winCommand = new ArrayList<String>(Arrays.asList(Fits.FITS_TOOLS_DIR+"exiftool/windows/exiftool.exe"));
-	private List<String> unixCommand = new ArrayList<String>(Arrays.asList("perl",Fits.FITS_TOOLS_DIR+"exiftool/perl/exiftool"));
-	private List<String> perlTestCommand = Arrays.asList("which", "perl");
+	private final List<String> unixCommand = new ArrayList<String>(Arrays.asList("exiftool"));
+	private final List<String> perlTestCommand = Arrays.asList("which", "perl");
 	private final static String TOOL_NAME = "Exiftool";
 	private boolean enabled = true;
-    private Fits fits;
+    private final Fits fits;
 
     private final static String exiftoolFitsConfig = Fits.FITS_XML_DIR+"exiftool"+File.separator;
     private final static String genericTransform = "exiftool_generic_to_fits.xslt";
@@ -61,23 +58,13 @@ public class Exiftool extends ToolBase {
 		info = new ToolInfo();
 		info.setName(TOOL_NAME);
 		String versionOutput = null;
-		List<String> infoCommand = new ArrayList<String>();
-		if (osName.startsWith("Windows")) {
-			//use provided Windows exiftool.exe
-			osIsWindows = true;
-			infoCommand.addAll(winCommand);
-			info.setNote("exiftool for windows");
-			logger.debug("Exiftool will use Windows environment");
-		}
-		else if (testOSForPerl()){
-			osHasPerl = true;
+		List<String> infoCommand;
+		if (testOSForPerl()){
 			//use OS version of perl and the provided perl version of exiftool
-			infoCommand.addAll(unixCommand);
+			infoCommand = new ArrayList<>(unixCommand);
 			info.setNote("exiftool for unix");
             logger.debug("Exiftool will use Unix Perl environment");
-		}
-
-		else {
+		} else {
 		    logger.error ("Perl and Windows not supported, not running Exiftool");
 			throw new FitsToolException("Exiftool cannot be used on this system");
 		}
@@ -90,22 +77,8 @@ public class Exiftool extends ToolBase {
 	public ToolOutput extractInfo(File file) throws FitsToolException {
         logger.debug("Exiftool.extractInfo starting on " + file.getName());
 		long startTime = System.currentTimeMillis();
-		List<String> execCommand = new ArrayList<String>();
-		//determine if the file can be used on the current platform
-		if (osIsWindows) {
-			//use provided Windows File Utility
-			execCommand.addAll(winCommand);
-			execCommand.add(file.getPath());
-		}
-		else if(osHasPerl) {
-			//use file command in operating system
-			execCommand.addAll(unixCommand);
-			execCommand.add(file.getPath());
-		}
-		else {
-			//Tool cannot be used on this file on this system
-			return null;
-		}
+		List<String> execCommand = new ArrayList<>(unixCommand);
+		execCommand.add(file.getPath());
 		//Output in tabbed format with tag names instead of descriptive names
 		execCommand.add("-t");
 		execCommand.add("-s");
