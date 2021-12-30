@@ -58,7 +58,9 @@ RUN cd /var/tmp && \
     rm -rf file-${FILE_VERSION}*
 
 # Install MediaInfo https://github.com/MediaArea/MediaInfo
-RUN apt-get install -yqq libmms0
+RUN apt-get install -yqq \
+    libmms0 \
+    libcurl3-gnutls
 RUN cd /var/tmp && \
     curl -so libzen0.deb https://mediaarea.net/download/binary/libzen0/0.4.39/libzen0v5_0.4.39-1_amd64.xUbuntu_20.04.deb && \
     curl -so libmediainfo0.deb https://mediaarea.net/download/binary/libmediainfo0/21.09/libmediainfo0v5_21.09-1_amd64.xUbuntu_20.04.deb && \
