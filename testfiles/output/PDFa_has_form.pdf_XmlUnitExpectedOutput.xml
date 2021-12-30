@@ -32,6 +32,7 @@
       <title toolname="Jhove" toolversion="1.20">DRS Owner Registration and Billing Code Request Form : DRS &amp; Delivery Services : Office for Information Systems</title>
       <author toolname="Exiftool" toolversion="11.01" status="SINGLE_RESULT">Pdfcrowd - online HTML to PDF API - http://pdfcrowd.com</author>
       <pageCount toolname="Jhove" toolversion="1.20">3</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">yes</hasAnnotations>
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
@@ -46,6 +47,7 @@
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
         <fontName>Arimo-Bold</fontName>
       </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>3</docmd:PageCount>

@@ -31,6 +31,7 @@
       <title toolname="Jhove" toolversion="1.20">UniversityRecordsPolicies</title>
       <author toolname="Jhove" toolversion="1.20">Harvard University Archives</author>
       <pageCount toolname="Jhove" toolversion="1.20">3</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasAnnotations>
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
@@ -51,6 +52,7 @@
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
         <fontName>TimesNewRomanPSMT</fontName>
       </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>3</docmd:PageCount>

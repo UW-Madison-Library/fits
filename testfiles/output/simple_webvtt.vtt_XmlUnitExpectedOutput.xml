@@ -14,10 +14,26 @@
     <md5checksum toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">6fd0c9caa00b08305344cc42244666af</md5checksum>
     <fslastmodified toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">1460585102000</fslastmodified>
   </fileinfo>
-  <filestatus />
-  <metadata />
-  <statistics fitsExecutionTime="672">
-    <tool toolname="MediaInfo" toolversion="0.7.75" status="did not run" />
+  <filestatus>
+    <well-formed toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</well-formed>
+    <valid toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</valid>
+  </filestatus>
+  <metadata>
+    <text>
+      <linebreak toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">LF</linebreak>
+      <charset toolname="Jhove" toolversion="1.25.1-wisc">US-ASCII</charset>
+      <standard>
+        <textMD:textMD xmlns:textMD="info:lc/xmlns/textMD-v3">
+          <textMD:character_info>
+            <textMD:charset>US-ASCII</textMD:charset>
+            <textMD:linebreak>LF</textMD:linebreak>
+          </textMD:character_info>
+        </textMD:textMD>
+      </standard>
+    </text>
+  </metadata>
+  <statistics fitsExecutionTime="49">
+    <tool toolname="MediaInfo" toolversion="21.09" status="did not run" />
     <tool toolname="OIS Audio Information" toolversion="0.1" status="did not run" />
     <tool toolname="ADL Tool" toolversion="0.1" status="did not run" />
     <tool toolname="VTT Tool" toolversion="0.1" executionTime="114" />

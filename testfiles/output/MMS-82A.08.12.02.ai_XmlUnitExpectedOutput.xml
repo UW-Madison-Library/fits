@@ -18,8 +18,20 @@
     <md5checksum toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">b09e1524642c0166da3566d4c7e03871</md5checksum>
     <fslastmodified toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">1502306011000</fslastmodified>
   </fileinfo>
-  <filestatus />
+  <filestatus>
+    <well-formed toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</well-formed>
+    <valid toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</valid>
+  </filestatus>
   <metadata>
+    <document>
+      <title toolname="Jhove" toolversion="1.25.1-wisc">MMS-82A.08.12.02.ai</title>
+      <pageCount toolname="Jhove" toolversion="1.25.1-wisc">1</pageCount>
+      <hasOutline toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">no</hasOutline>
+      <hasAnnotations toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">no</hasAnnotations>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Myriad-Roman</fontName>
+      </font>
+    </document>
     <image>
       <imageWidth toolname="Exiftool" toolversion="10.00" status="SINGLE_RESULT">315</imageWidth>
       <imageHeight toolname="Exiftool" toolversion="10.00" status="SINGLE_RESULT">704</imageHeight>

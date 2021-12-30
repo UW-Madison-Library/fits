@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fits xmlns="http://hul.harvard.edu/ois/xml/ns/fits/fits_output" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hul.harvard.edu/ois/xml/ns/fits/fits_output http://hul.harvard.edu/ois/xml/xsd/fits/fits_output.xsd" version="1.6.7-wisc-SNAPSHOT" timestamp="12/30/21, 5:03 PM">
+  <identification>
+    <identity format="Keyhole Markup Language" mimetype="application/vnd.google-earth.kml+xml" toolname="FITS" toolversion="1.6.7-wisc-SNAPSHOT">
+      <tool toolname="Droid" toolversion="6.5" />
+      <tool toolname="Tika" toolversion="2.2.1" />
+      <externalIdentifier toolname="Droid" toolversion="6.5" type="puid">fmt/244</externalIdentifier>
+    </identity>
+  </identification>
+  <fileinfo>
+    <size toolname="Jhove" toolversion="1.25.1-wisc">52326</size>
+    <filepath toolname="OIS File Information" toolversion="1.0" status="SINGLE_RESULT">/fits/testfiles/KXXJXH4YTGWQ68W.kml</filepath>
+    <filename toolname="OIS File Information" toolversion="1.0" status="SINGLE_RESULT">KXXJXH4YTGWQ68W.kml</filename>
+    <md5checksum toolname="OIS File Information" toolversion="1.0" status="SINGLE_RESULT">4078d0d65af34f500bcd311ee310fe33</md5checksum>
+    <fslastmodified toolname="OIS File Information" toolversion="1.0" status="SINGLE_RESULT">1640876133761</fslastmodified>
+  </fileinfo>
+  <filestatus>
+    <well-formed toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</well-formed>
+    <valid toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</valid>
+  </filestatus>
+  <metadata>
+    <text>
+      <charset toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">UTF-8</charset>
+      <markupBasis toolname="Jhove" toolversion="1.25.1-wisc">XML</markupBasis>
+      <markupBasisVersion toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">1.0</markupBasisVersion>
+      <standard>
+        <textMD:textMD xmlns:textMD="info:lc/xmlns/textMD-v3">
+          <textMD:character_info>
+            <textMD:charset>UTF-8</textMD:charset>
+          </textMD:character_info>
+          <textMD:markup_basis version="1.0">XML</textMD:markup_basis>
+        </textMD:textMD>
+      </standard>
+    </text>
+  </metadata>
+  <statistics fitsExecutionTime="330">
+    <tool toolname="MediaInfo" toolversion="21.09" status="did not run" />
+    <tool toolname="OIS Audio Information" toolversion="0.1" status="did not run" />
+    <tool toolname="ADL Tool" toolversion="0.1" status="did not run" />
+    <tool toolname="VTT Tool" toolversion="0.1" status="did not run" />
+    <tool toolname="Droid" toolversion="6.5" executionTime="42" />
+    <tool toolname="Jhove" toolversion="1.25.1-wisc" executionTime="52" />
+    <tool toolname="file utility" toolversion="5.41" executionTime="83" />
+    <tool toolname="Exiftool" toolversion="12.38" executionTime="328" />
+    <tool toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="did not run" />
+    <tool toolname="OIS File Information" toolversion="1.0" executionTime="1" />
+    <tool toolname="OIS XML Metadata" toolversion="0.2" status="did not run" />
+    <tool toolname="ffident" toolversion="0.2" executionTime="3" />
+    <tool toolname="Tika" toolversion="2.2.1" executionTime="34" />
+  </statistics>
+</fits>

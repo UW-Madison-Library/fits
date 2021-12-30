@@ -30,6 +30,7 @@
     <document>
       <author toolname="Exiftool" toolversion="11.01" status="SINGLE_RESULT">XPP</author>
       <pageCount toolname="Jhove" toolversion="1.20">4</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">yes</hasAnnotations>
       <graphicsCount toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">5</graphicsCount>
@@ -57,6 +58,7 @@
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
         <fontName>Universal-GreekwithMathPi</fontName>
       </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>4</docmd:PageCount>

@@ -21,19 +21,65 @@
     <md5checksum toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">537d5a41d854b5c03f8bb33041faf1aa</md5checksum>
     <fslastmodified toolname="OIS File Information" toolversion="0.2" status="SINGLE_RESULT">1516117983000</fslastmodified>
   </fileinfo>
-  <filestatus />
+  <filestatus>
+    <well-formed toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</well-formed>
+    <valid toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">true</valid>
+  </filestatus>
   <metadata>
     <document>
-      <pageCount toolname="Exiftool" toolversion="11.01">5</pageCount>
-      <title toolname="Exiftool" toolversion="11.01">Digital Repository Services (DRS) User Manual for Data Loading</title>
-      <author toolname="Exiftool" toolversion="11.01">viz765</author>
-      <language toolname="Exiftool" toolversion="11.01">EN-US</language>
-      <isTagged toolname="Exiftool" toolversion="11.01" status="SINGLE_RESULT">yes</isTagged>
+      <title toolname="Jhove" toolversion="1.25.1-wisc">Digital Repository Services (DRS) User Manual for Data Loading</title>
+      <author toolname="Jhove" toolversion="1.25.1-wisc">viz765</author>
+      <language toolname="Jhove" toolversion="1.25.1-wisc">EN-US</language>
+      <pageCount toolname="Jhove" toolversion="1.25.1-wisc">5</pageCount>
+      <isTagged toolname="Jhove" toolversion="1.25.1-wisc">yes</isTagged>
+      <hasOutline toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">yes</hasOutline>
+      <hasAnnotations toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">yes</hasAnnotations>
+      <graphicsCount toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">1</graphicsCount>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Arial</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Arial,Bold</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Calibri</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Cambria</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>Cambria-Bold</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>CourierNew</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>SymbolMT</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>TimesNewRoman</fontName>
+      </font>
+      <font toolname="Jhove" toolversion="1.25.1-wisc" status="SINGLE_RESULT">
+        <fontName>TimesNewRoman,Bold</fontName>
+      </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>5</docmd:PageCount>
+          <docmd:GraphicsCount>1</docmd:GraphicsCount>
           <docmd:Language>EN-US</docmd:Language>
+          <docmd:Font FontName="Arial" />
+          <docmd:Font FontName="Arial,Bold" />
+          <docmd:Font FontName="Calibri" />
+          <docmd:Font FontName="Cambria" />
+          <docmd:Font FontName="Cambria-Bold" />
+          <docmd:Font FontName="CourierNew" />
+          <docmd:Font FontName="SymbolMT" />
+          <docmd:Font FontName="TimesNewRoman" />
+          <docmd:Font FontName="TimesNewRoman,Bold" />
           <docmd:Features>isTagged</docmd:Features>
+          <docmd:Features>hasOutline</docmd:Features>
+          <docmd:Features>hasAnnotations</docmd:Features>
         </docmd:document>
       </standard>
     </document>

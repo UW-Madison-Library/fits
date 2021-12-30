@@ -18,7 +18,19 @@
   </fileinfo>
   <filestatus />
   <metadata>
-    <document />
+    <document>
+      <isRightsManaged toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">yes</isRightsManaged>
+      <subject toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">fiction</subject>
+      <identifier toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">urn:uuid:1a16ce38-82bd-4e9b-861e-773c2e787a50</identifier>
+      <language toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">en-GB</language>
+      <title toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">Alice's Adventures in Wonderland</title>
+      <author toolname="Tika" toolversion="2.2.1" status="SINGLE_RESULT">Lewis Carroll</author>
+      <standard>
+        <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
+          <docmd:Language>en-GB</docmd:Language>
+        </docmd:document>
+      </standard>
+    </document>
   </metadata>
   <statistics fitsExecutionTime="191">
     <tool toolname="MediaInfo" toolversion="0.7.75" status="did not run" />

@@ -24,8 +24,10 @@
   </filestatus>
   <metadata>
     <document>
-      <title toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">Untitled-2</title>
-      <pageCount toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">16</pageCount>
+      <title toolname="Jhove" toolversion="1.11">Untitled-2</title>
+      <author toolname="Exiftool" toolversion="12.38" status="SINGLE_RESULT">Adobe InDesign CS6 (Windows)</author>
+      <pageCount toolname="Jhove" toolversion="1.11">16</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">no</hasAnnotations>
       <font toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">
@@ -37,6 +39,7 @@
       <font toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">
         <fontName>OpenSans-Bold</fontName>
       </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>16</docmd:PageCount>

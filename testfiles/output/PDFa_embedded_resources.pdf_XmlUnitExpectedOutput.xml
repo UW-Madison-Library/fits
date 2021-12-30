@@ -31,6 +31,7 @@
       <title toolname="Jhove" toolversion="1.20">digibook</title>
       <author toolname="Jhove" toolversion="1.20">Harvard University Archives</author>
       <pageCount toolname="Jhove" toolversion="1.20">52</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">no</hasAnnotations>
       <graphicsCount toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">433</graphicsCount>
@@ -54,6 +55,7 @@
       </font>
       <subject toolname="Exiftool" toolversion="11.01">booklet10</subject>
       <description toolname="Exiftool" toolversion="11.01">booklet10</description>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>52</docmd:PageCount>

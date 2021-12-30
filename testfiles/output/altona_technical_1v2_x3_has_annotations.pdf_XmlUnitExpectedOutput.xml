@@ -31,6 +31,7 @@
       <title toolname="Jhove" toolversion="1.11">Altona_Technical_1v2_x3.pdf</title>
       <author toolname="Jhove" toolversion="1.11">ECI (www.eci.org), bvdm (www.bvdm-online.de), FOGRA (www.fogra.org), ugra (www.ugra.ch)</author>
       <pageCount toolname="Jhove" toolversion="1.11">1</pageCount>
+      <isTagged toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</isTagged>
       <hasOutline toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">no</hasOutline>
       <hasAnnotations toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">yes</hasAnnotations>
       <graphicsCount toolname="Jhove" toolversion="1.11" status="SINGLE_RESULT">44</graphicsCount>
@@ -52,6 +53,7 @@
       <subject toolname="Exiftool" toolversion="10.00" status="CONFLICT">Altona Test Suite – Online Version</subject>
       <subject toolname="Tika" toolversion="2.2.1" status="CONFLICT">PDF/X-3 (ISO 15930-3), ICC Color Management, Standard Printing Conditions: Offset printing, according to ISO/DIS 12647-2:2003, OFCOM,  paper type 1+2 = coated art, 115 g/m2, screen ruling 60 cm-1, positive-acting plates (FOGRA27L)</subject>
       <description toolname="Exiftool" toolversion="10.00">Altona Test Suite – Online Version</description>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">yes</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>1</docmd:PageCount>
@@ -62,6 +64,7 @@
           <docmd:Font FontName="Metabook01" />
           <docmd:Font FontName="Metanormal01-Bold" />
           <docmd:Features>hasAnnotations</docmd:Features>
+          <docmd:Features>hasForms</docmd:Features>
         </docmd:document>
       </standard>
     </document>

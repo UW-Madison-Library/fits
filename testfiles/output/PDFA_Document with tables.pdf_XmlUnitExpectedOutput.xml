@@ -58,6 +58,7 @@
       <font toolname="Jhove" toolversion="1.20" status="SINGLE_RESULT">
         <fontName>Wingdings2</fontName>
       </font>
+      <hasForms toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="SINGLE_RESULT">no</hasForms>
       <standard>
         <docmd:document xmlns:docmd="http://www.fcla.edu/docmd">
           <docmd:PageCount>3</docmd:PageCount>

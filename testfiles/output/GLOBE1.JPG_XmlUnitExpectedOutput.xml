@@ -25,7 +25,7 @@
   <metadata>
     <image>
       <byteOrder toolname="Jhove" toolversion="1.16" status="SINGLE_RESULT">big endian</byteOrder>
-      <compressionScheme toolname="Jhove" toolversion="1.16" status="SINGLE_RESULT">JPEG</compressionScheme>
+      <compressionScheme toolname="Jhove" toolversion="1.16">JPEG</compressionScheme>
       <imageWidth toolname="Jhove" toolversion="1.16">582</imageWidth>
       <imageHeight toolname="Jhove" toolversion="1.16">597</imageHeight>
       <colorSpace toolname="Jhove" toolversion="1.16" status="SINGLE_RESULT">YCbCr</colorSpace>
