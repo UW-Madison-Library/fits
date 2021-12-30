@@ -57,8 +57,7 @@
       <lightSource toolname="Jhove" toolversion="1.20">unknown</lightSource>
       <subjectDistance toolname="Exiftool" toolversion="11.01" status="CONFLICT">undef</subjectDistance>
       <subjectDistance toolname="NLNZ Metadata Extractor" toolversion="3.6GA" status="CONFLICT">NaN</subjectDistance>
-      <meteringMode toolname="Jhove" toolversion="1.20" status="CONFLICT">centre weighted average</meteringMode>
-      <meteringMode toolname="Exiftool" toolversion="11.01" status="CONFLICT">Center weighted average</meteringMode>
+      <meteringMode toolname="Jhove" toolversion="1.25.1-wisc">Center weighted average</meteringMode>
       <flash toolname="Jhove" toolversion="1.20">No flash function</flash>
       <focalLength toolname="Jhove" toolversion="1.20" status="CONFLICT">2.77</focalLength>
       <focalLength toolname="Exiftool" toolversion="11.01" status="CONFLICT">2.8</focalLength>
