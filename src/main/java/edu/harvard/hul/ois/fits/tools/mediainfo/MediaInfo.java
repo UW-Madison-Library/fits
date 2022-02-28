@@ -14,7 +14,6 @@ import java.io.File;
 import java.io.StringReader;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
 import org.jdom.Document;
 
 import edu.harvard.hul.ois.fits.Fits;
@@ -22,6 +21,8 @@ import edu.harvard.hul.ois.fits.exceptions.FitsToolException;
 import edu.harvard.hul.ois.fits.tools.ToolBase;
 import edu.harvard.hul.ois.fits.tools.ToolInfo;
 import edu.harvard.hul.ois.fits.tools.ToolOutput;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**  The glue class for invoking the MediaInfo native library under FITS.
  */
@@ -34,7 +35,7 @@ public class MediaInfo extends ToolBase {
     private final static String mediaInfoFitsConfig = Fits.FITS_XML_DIR+"mediainfo"+File.separator;
     private final static String xsltTransform = "mediainfo_video_to_fits.xslt";
 
-    private static final Logger logger = Logger.getLogger(MediaInfo.class);
+	private static final Logger logger = LoggerFactory.getLogger(MediaInfo.class);
     private static MediaInfoNativeWrapper mi = null;
 
     /**
