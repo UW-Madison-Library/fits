@@ -38,8 +38,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.log4j.Logger;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.gov.nationalarchives.droid.command.action.CommandExecutionException;
 import uk.gov.nationalarchives.droid.command.container.Ole2ContainerContentIdentifier;
 import uk.gov.nationalarchives.droid.command.container.ZipContainerContentIdentifier;
@@ -93,7 +93,7 @@ public class ResultPrinter {
     private ContainerAggregator aggregator;
     private Map<String, Format> puidFormatMap;
     
-    private static final Logger logger = Logger.getLogger(ResultPrinter.class);
+    private static final Logger logger = LoggerFactory.getLogger(ResultPrinter.class);
 
     /**
      * Store signature files.
